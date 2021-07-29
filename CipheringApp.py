@@ -85,7 +85,7 @@ class AppDemo(QWidget):
         img = cv2.imread(file_path)
 
         imgReshaped = img.reshape(img.shape[0], -1)
-        np.savetxt("NudeCSV.csv", imgReshaped)
+        np.savetxt("CodedPhoto.csv", imgReshaped)
 
     def software(self):
         nadawca = self.sender()
@@ -100,7 +100,7 @@ class AppDemo(QWidget):
     def retrievePhoto(self, file_path):
         loadedArr = np.loadtxt(file_path)
         loadedOriginal = loadedArr.reshape(loadedArr.shape[0], loadedArr.shape[1] // 3, 3)
-        img2 = cv2.imwrite("nude2.jpg",loadedOriginal)
+        img2 = cv2.imwrite("Photo.jpg",loadedOriginal)
 
 app = QApplication(sys.argv)
 demo = AppDemo()
