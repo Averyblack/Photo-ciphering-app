@@ -59,7 +59,7 @@ class AppDemo(QWidget):
         self.button2.clicked.connect(self.software)
         self.dirButton.clicked.connect(self.software)
 
-        self.password = "Password"
+        self.password = "grew46gd2"
         self.folderName = os.getcwd()
 
     def dragEnterEvent(self, event):
